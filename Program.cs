@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using SOLID.SRP;
+using SOLID.OCP1;
+using SOLID.OCP2;
 
 namespace SOLID
 {
@@ -25,6 +27,25 @@ namespace SOLID
             cullenClan.Add(bellaCullen);
 
             VampireInfo.Check(cullenClan);
+
+
+            // Open - Closed Principle
+
+            BatForm batForm = new BatForm();
+            batForm.ChangeForm(edwardCullen);
+
+            NosferatuForm nosferatuForm = new NosferatuForm();
+            nosferatuForm.ChangeForm(bellaCullen);
+
+            //==============================================================
+
+            
+            BatForm2 batForm2 = new BatForm2();
+            batForm2.ChangeForm(edwardCullen);
+
+            NosferatuForm2 nosferatuForm2 = new NosferatuForm2();
+            nosferatuForm2.ChangeForm(bellaCullen);
+
         }
     }
 }
