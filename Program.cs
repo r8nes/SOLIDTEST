@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using SOLID.SRP;
+﻿using System.Collections.Generic;
 using SOLID.OCP1;
 using SOLID.OCP2;
+using SOLID.SRP;
+using SOLID.LSP;
 
 namespace SOLID
 {
@@ -10,8 +10,8 @@ namespace SOLID
     {
         static void Main(string[] args)
         {
-            //  Single Responsibility Principle
-
+//================== Single Responsibility Principle ============================
+ 
 
             Vampire edwardCullen = new Vampire("Edward", 112);
             Vampire bellaCullen = new Vampire("Bella", 18);
@@ -19,7 +19,7 @@ namespace SOLID
             VampireInfo.Check(edwardCullen);
             VampireInfo.Check(bellaCullen);
 
-//=============================================================
+          //====================================================
             
             List<Vampire> cullenClan = new List<Vampire>();
             
@@ -29,7 +29,7 @@ namespace SOLID
             VampireInfo.Check(cullenClan);
 
 
-            // Open - Closed Principle
+//===================== Open - Closed Principle =============================
 
             BatForm batForm = new BatForm();
             batForm.ChangeForm(edwardCullen);
@@ -37,7 +37,7 @@ namespace SOLID
             NosferatuForm nosferatuForm = new NosferatuForm();
             nosferatuForm.ChangeForm(bellaCullen);
 
-            //==============================================================
+            //======================================================
 
             
             BatForm2 batForm2 = new BatForm2();
@@ -45,6 +45,19 @@ namespace SOLID
 
             NosferatuForm2 nosferatuForm2 = new NosferatuForm2();
             nosferatuForm2.ChangeForm(bellaCullen);
+
+
+            //======================== Liskov Substitution Principle ==========================
+
+            List<IMonster> monsters = new List<IMonster>();
+            
+            monsters.Add(new Werewolf());
+            monsters.Add(new Wolf());
+            
+            foreach (var monster in monsters)
+            {
+                monster.Bite();
+            }
 
         }
     }
