@@ -1,9 +1,8 @@
 ﻿using System;
-using SOLID.SRP;
 
-namespace SOLID.OCP1
-{ 
-        public class Form
+namespace SOLID
+{
+    public class Form
         {
             public virtual void ChangeForm(Vampire vampire)
             {
@@ -23,7 +22,7 @@ namespace SOLID.OCP1
         {
             public override void ChangeForm(Vampire vampire)
             {
-                Console.WriteLine($"{vampire.GetName()} is Nosferatu now. Run away!.\n");
+                Console.WriteLine($"{vampire.GetName()} is Nosferatu now. Run away!.\nw  ");
             }
         }
     }

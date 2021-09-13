@@ -1,9 +1,8 @@
 ﻿using System;
-using SOLID.SRP;
 
-namespace SOLID.OCP2
-{ 
-        interface IForm
+namespace SOLID
+{
+    interface IForm
         {
             public void ChangeForm(Vampire vampire) {}
         }

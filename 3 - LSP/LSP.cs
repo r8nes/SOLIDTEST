@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SOLID.LSP
+namespace SOLID
 {
     public interface IMonster
     {
@@ -11,7 +9,7 @@ namespace SOLID.LSP
 
     public interface IHuman
     {
-        void Punch();
+        void DoAttack();
     }
 
     public class Werewolf : IHuman, IMonster
@@ -19,10 +17,9 @@ namespace SOLID.LSP
         public void Bite()
         {
             Console.WriteLine("Bite!");
-
         }
 
-        public void Punch()
+        public void DoAttack()
         {
             Console.WriteLine("Punch");
         }

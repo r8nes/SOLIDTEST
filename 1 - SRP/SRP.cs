@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace SOLID.SRP
+namespace SOLID
 {
-    public class Vampire
+    public partial class Vampire
     {
         private string _name;
         private int _age;
