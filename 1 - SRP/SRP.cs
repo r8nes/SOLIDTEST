@@ -38,6 +38,15 @@ namespace SOLID
             }
         }
     }
+
+    public class VampireHealth {
+        
+        int health;
+
+        public int GetDamage(int amount) {
+           return health -= amount;
+        }
+    }
 }
 
 
